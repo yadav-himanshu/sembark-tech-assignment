@@ -46,7 +46,7 @@ function ProductDetailPage() {
           <img
             src={product.images[0]}
             alt={product.title}
-            className="w-full h-[450px] object-cover rounded-lg"
+            className="w-full h-112.5 object-cover rounded-lg"
           />
         </div>
 
