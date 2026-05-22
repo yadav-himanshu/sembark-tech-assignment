@@ -20,9 +20,8 @@ function HomePage() {
       } catch (error) {
         setError("Something went wrong");
         // console.error(error);
-      }
-      finally{
-        setLoading(false)
+      } finally {
+        setLoading(false);
       }
     };
     fetchProducts();

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleProduct } from "../services/productService";
 import type { Product } from "../types/product";
+import { useCart } from "../context/CartContext";
 
 function ProductDetailPage() {
   const { id } = useParams();
@@ -9,6 +10,7 @@ function ProductDetailPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const { addToCart } = useCart();
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -57,7 +59,10 @@ function ProductDetailPage() {
 
           <p className="text-gray-700 mt-6 leading-7">{product.description}</p>
 
-          <button className="mt-8 bg-black text-white px-6 py-3 rounded-lg hover:opacity-90">
+          <button
+            onClick={() => addToCart(product)}
+            className="mt-8 bg-black text-white px-6 py-3 rounded-lg hover:opacity-90"
+          >
             Add to Cart
           </button>
         </div>
