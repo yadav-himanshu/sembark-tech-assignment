@@ -13,13 +13,13 @@ function HomePage() {
       try {
         setLoading(true);
         const data = await getAllProducts();
-        console.log(data);
-        console.log(data[0]);
+        // console.log(data);
+        // console.log(data[0]);
         // setProducts(data);
         setProducts(data.slice(0, 12));
       } catch (error) {
         setError("Something went wrong");
-        console.error(error);
+        // console.error(error);
       }
       finally{
         setLoading(false)
