@@ -17,6 +17,7 @@ A modern and responsive e-commerce frontend application built using React, TypeS
 - Dynamic Routing with React Router
 - Loading States & Error Handling
 - **E2E Testing:** Robust test coverage for core interactions (homepage loading and add-to-cart flows) powered by Playwright.
+- Load More Pagination
 
 ---
 
@@ -29,6 +30,7 @@ A modern and responsive e-commerce frontend application built using React, TypeS
 - React Router DOM
 - Context API
 - Playwright
+
 ---
 
 ## Project Structure
@@ -85,11 +87,11 @@ npm run dev
 
 ## Available Routes
 
-| Route | Description |
-|---|---|
-| `/` | Product Listing Page |
-| `/product/:id` | Product Detail Page |
-| `/cart` | Shopping Cart Page |
+| Route          | Description          |
+| -------------- | -------------------- |
+| `/`            | Product Listing Page |
+| `/product/:id` | Product Detail Page  |
+| `/cart`        | Shopping Cart Page   |
 
 ---
 
@@ -124,7 +126,6 @@ npx playwright test
 ```
 
 ---
-
 
 ## Future Improvements
 

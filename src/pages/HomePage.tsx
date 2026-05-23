@@ -9,7 +9,7 @@ function HomePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const Items_Per_Click = 8;
-  const [visibleCount, setVisibleCount] =useState(Items_Per_Click);
+  const [visibleCount, setVisibleCount] = useState(Items_Per_Click);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -36,21 +36,19 @@ function HomePage() {
   if (error) {
     return <h1 className="p-6 text-red-500">{error}</h1>;
   }
-  const visibleProducts=products.slice(0,visibleCount);
+  const visibleProducts = products.slice(0, visibleCount);
   return (
-    <div className="p-6">
+    <div className="p-2">
       <h1 className="text-3xl font-bold mb-6">Products</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {visibleProducts.map((product: Product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      {visibleCount<products.length&&(
+      {visibleCount < products.length && (
         <Pagination
-        onclick={()=>
-            setVisibleCount((prev)=>prev+Items_Per_Click)
-        }
+          onclick={() => setVisibleCount((prev) => prev + Items_Per_Click)}
         />
       )}
     </div>

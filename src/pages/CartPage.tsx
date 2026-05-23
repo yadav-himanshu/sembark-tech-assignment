@@ -14,40 +14,44 @@ function CartPage() {
   return (
     <div className="max-w-5xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
-      <div className="">
+      <div className="flex flex-col gap-4">
         {cartItems.map((item) => (
-          <div key={item.id} className="flex gap-4 border p-4 rounded-lg">
+          <div
+            key={item.id}
+            className="flex gap-4 border border-gray-400 p-4 rounded-lg"
+          >
             <img
               src={item.images[0]}
               alt={item.title}
               className="w-28 h-28 object-cover rounded-md"
             />
-            <div className="flex-1">
-              <h2 className="font-semibold">{item.title}</h2>
-              <p>${item.price}</p>
-              <div className="flex items-center gap-3">
-                <button
-                  className="border px-3 py-1"
-                  onClick={() => decreaseQuantity(item.id)}
-                >
-                  -
-                </button>
-                <span>{item.quantity}</span>
-                <button
-                  className="border px-3 py-1"
-                  onClick={() => increaseQuantity(item.id)}
-                >
-                  +
-                </button>
+            <div className="flex gap-3 flex-col md:flex-row flex-1 justify-between">
+              <div>
+                <h2 className="font-semibold">{item.title}</h2>
+                <p>${item.price}</p>
+                <div className="flex items-center gap-3">
+                  <button
+                    className="border px-3 py-1"
+                    onClick={() => decreaseQuantity(item.id)}
+                  >
+                    -
+                  </button>
+                  <span>{item.quantity}</span>
+                  <button
+                    className="border px-3 py-1"
+                    onClick={() => increaseQuantity(item.id)}
+                  >
+                    +
+                  </button>
+                </div>
               </div>
+              <button
+                className="text-red-500"
+                onClick={() => removeFromCart(item.id)}
+              >
+                Remove
+              </button>
             </div>
-
-            <button
-              className="text-red-500"
-              onClick={() => removeFromCart(item.id)}
-            >
-              Remove
-            </button>
           </div>
         ))}
 

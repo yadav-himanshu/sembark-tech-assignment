@@ -61,7 +61,7 @@ function ProductDetailPage() {
 
           <button
             onClick={() => addToCart(product)}
-            className="mt-8 bg-black text-white px-6 py-3 rounded-lg hover:opacity-90"
+            className="mt-8 bg-black text-white px-6 py-2 rounded-lg hover:opacity-90"
           >
             Add to Cart
           </button>

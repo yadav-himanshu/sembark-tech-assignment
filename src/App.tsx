@@ -8,11 +8,13 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/product/:id" element={<ProductDetailPage />} />
-        <Route path="/cart" element={<CartPage />} />
-      </Routes>
+      <main className="max-w-7xl mx-auto p-4">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }
