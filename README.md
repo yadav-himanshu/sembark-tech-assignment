@@ -16,6 +16,7 @@ A modern and responsive e-commerce frontend application built using React, TypeS
 - Fully Responsive Design
 - Dynamic Routing with React Router
 - Loading States & Error Handling
+- **E2E Testing:** Robust test coverage for core interactions (homepage loading and add-to-cart flows) powered by Playwright.
 
 ---
 
@@ -27,7 +28,7 @@ A modern and responsive e-commerce frontend application built using React, TypeS
 - Tailwind CSS
 - React Router DOM
 - Context API
-
+- Playwright
 ---
 
 ## Project Structure
@@ -65,7 +66,7 @@ git clone <repo-url>
 ### Navigate to project folder
 
 ```bash
-cd ecommerce-app
+cd sembark-tech-assignment
 ```
 
 ### Install dependencies
@@ -100,6 +101,30 @@ npm run dev
 - Persistent cart state using `localStorage`
 
 ---
+
+## Running Tests
+
+This application uses [Playwright](https://playwright.dev/) for reliable end-to-end testing.
+
+### Install Playwright Browsers
+
+Before running E2E tests for the first time, install the required test browsers:
+
+```bash
+npx playwright install
+```
+
+### Run Tests
+
+To run E2E test scenarios locally:
+
+```bash
+# Make sure your dev server is running (npm run dev) in another terminal window
+npx playwright test
+```
+
+---
+
 
 ## Future Improvements
 

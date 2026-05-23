@@ -16,7 +16,7 @@ const Navbar = () => {
           Shop
         </Link>
         <Link to="/cart" className="font-medium">
-          Cart({totalItems})
+          {'Cart (' + totalItems + ')'}
         </Link>
       </div>
     </header>
