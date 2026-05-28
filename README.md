@@ -18,6 +18,9 @@ A modern and responsive e-commerce frontend application built using React, TypeS
 - Loading States & Error Handling
 - **E2E Testing:** Robust test coverage for core interactions (homepage loading and add-to-cart flows) powered by Playwright.
 - Load More Pagination
+- Multiple Category Filtering
+- Product Sorting (Low to High / High to Low)
+- URL Query Persistence for Filters & Sorting
 
 ---
 
@@ -62,7 +65,7 @@ https://api.escuelajs.co/api/v1/products
 ### Clone the repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/yadav-himanshu/sembark-tech-assignment.git
 ```
 
 ### Navigate to project folder
@@ -104,6 +107,14 @@ npm run dev
 
 ---
 
+## Filtering & Sorting
+
+- Filter products by multiple categories
+- Sort products by price
+- Filter and sorting state persisted using URL query parameters
+- Shareable filtered URLs
+- Supports refresh and browser back navigation persistence
+
 ## Running Tests
 
 This application uses [Playwright](https://playwright.dev/) for reliable end-to-end testing.
@@ -130,8 +141,6 @@ npx playwright test
 ## Future Improvements
 
 - Product Search
-- Category Filters
-- Sorting Functionality
 - Wishlist Feature
 - Checkout Flow
 - Toast Notifications
