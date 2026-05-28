@@ -27,7 +27,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </div>
       <button
         onClick={() => addToCart(product)}
-        className="mt-auto w-full bg-black text-white px-6 py-2 rounded-lg hover:opacity-90"
+        className="mt-auto w-full bg-black text-white px-6 py-2 rounded-lg cursor-pointer hover:opacity-90"
       >
         Add to Cart
       </button>

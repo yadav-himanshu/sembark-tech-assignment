@@ -78,12 +78,12 @@ function HomePage() {
               setSelectedCategories([]);
               setSortOrder("");
             }}
-            className="border border-gray-400 rounded-sm px-4 py-1 text-sm bg-gray-800 text-white"
+            className="border border-gray-400 cursor-pointer rounded-sm px-4 py-1 text-sm bg-gray-800 text-white"
           >
             Clear All
           </button>
           {categories.map((category) => (
-            <label key={category} className="flex items-center gap-1">
+            <label key={category} className="flex items-center gap-1 cursor-pointer">
               <input
                 type="checkbox"
                 checked={selectedCategories.includes(category)}
@@ -96,6 +96,7 @@ function HomePage() {
                     );
                   }
                 }}
+                className="rounded-sm cursor-pointer"
               />
               {category}
             </label>
@@ -104,7 +105,7 @@ function HomePage() {
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
-          className="border border-gray-400 p-2 rounded-lg"
+          className="border border-gray-400 p-2 rounded-lg cursor-pointer"
         >
           <option value="">Sort by</option>
           <option value="low-to-high">Low to High</option>

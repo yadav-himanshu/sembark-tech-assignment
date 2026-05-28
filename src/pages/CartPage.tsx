@@ -46,7 +46,7 @@ function CartPage() {
                 </div>
               </div>
               <button
-                className="text-red-500"
+                className="text-red-500 cursor-pointer"
                 onClick={() => removeFromCart(item.id)}
               >
                 Remove

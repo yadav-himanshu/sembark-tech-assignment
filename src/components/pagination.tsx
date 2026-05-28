@@ -4,7 +4,7 @@ interface LoadMoreButtonProps {
 const Pagination = ({ onclick }: LoadMoreButtonProps) => {
   return (
     <div className="flex justify-center mt-6">
-      <button onClick={onclick} className="border px-6 py-2 rounded-lg ">
+      <button onClick={onclick} className="border px-6 py-2 rounded-lg cursor-pointer">
         Load More
       </button>
     </div>
